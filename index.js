@@ -1,1 +1,1 @@
-module.exports = require('./lib/chai-date-string');
+module.exports = require('./lib/chai-integer');

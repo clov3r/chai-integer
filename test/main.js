@@ -2,15 +2,18 @@
 
 const chai = require('chai')
   , expect = chai.expect
-  , dateString = require('../');
+  , integer = require('../');
 
-chai.use(dateString);
+chai.use(integer);
 
-describe('chai-date-string', () => {
-  describe('expect(a).to.be.a.dateString()', () => {
-    it('should fail a is not valid date string', () => {
+describe('chai-integer', () => {
+  describe('expect(a).to.be.a.integer()', () => {
+    it('should fail if a is not an integer', () => {
       try {
-        expect('some random string').to.be.a.dateString();
+        expect(0.00000001).to.be.an.integer();
+        expect(3.5).to.be.an.integer();
+        expect(-1.1).to.be.an.integer();
+        expect('some random string').to.be.an.integer();
       }
       catch (err) {
         return;
@@ -19,11 +22,11 @@ describe('chai-date-string', () => {
       throw new Error('it should fail');
     });
 
-    it('should pass if a is valid date string', () => {
-      expect('2015').to.be.a.dateString();
-      expect('2015-12-12').to.be.a.dateString();
-      expect('2015-12-12 00:00').to.be.a.dateString();
-      expect('2015-12-12 00:00:12').to.be.a.dateString();
+    it('should pass if a is an integer', () => {
+      expect(1).to.be.an.integer();
+      expect(0).to.be.an.integer();
+      expect(-11).to.be.an.integer();
+      expect(9).to.be.an.integer();
     });
   });
 });

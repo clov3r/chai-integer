@@ -1,17 +1,17 @@
 {
-  "name": "chai-date-string",
+  "name": "chai-integer",
   "version": "0.1.0",
-  "description": "Validates a string to have valid date format",
+  "description": "Validates that a number is an integer",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/_mocha --reporter list"
   },
-  "repository": "https://github.com/googoid/chai-date-string",
+  "repository": "https://github.com/clov3r/chai-integer",
   "keywords": [
     "chai",
     "chai-plugin"
   ],
-  "author": "GooGo",
+  "author": "clov3r",
   "license": "ISC",
   "engines": {
     "node": ">=4.2.0"
